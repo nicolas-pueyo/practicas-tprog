@@ -5,7 +5,6 @@ class read: public inst
 {
 public:
     read();
-
-public:
     void ejecutar(std::stack<int> &pila);
+    string nombre();
 };
