@@ -4,4 +4,4 @@ class progSuma: public programa
 {
 public:
 	progSuma();
-}
+};

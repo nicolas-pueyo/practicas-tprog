@@ -8,11 +8,15 @@ using namespace std;
     {    
     }  
 
-    void ejecutar(stack<int> &pila) // el pedir un argumento detras de la función no esta implementado no se hacerlo, ver como se hace
+    void dup::ejecutar(stack<int> &pila, int& pc)
     {
         int tmp1 = pila.top();
         pila.pop();
         pila.push(tmp1);
         pila.push(tmp1);
     }
+    string dup::nombre()
+    {
+		cout << "dup";
+	}
 

@@ -1,30 +1,40 @@
-#include <vector>
 #include <stack>
+#include <iomanip>
 #include "programa.h"
 
 using namespace std;
 
 programa::programa()
-	: pc(0);
-{	
-	instrucciones.resize(0);
+	: pc(0), numInst(0);
+{
 }
 
-programa::ejecutar()
+
+programa::~programa()
+{
+	for(auto v : instrucciones)
+	{
+		delete v;
+	}
+	delete[] instrucciones;
+}
+
+void programa::ejecutar()
 {
 	stack<int> pila;
-	for(const auto& instrucciones : v)
+	for(auto v : instrucciones)
 	{
-		v->ejecutar(pila);
+		v->ejecutar(pila, pc);
 	}
 }
 
-programa::listar()
+void programa::listar()
 {
 	int i;
-	for(const auto& instrucciones : v)
+	for(auto v : instrucciones)
 	{
-		cout << i << " " << v->listar() << endl;
+		cout << i << "   " << v->nombre() << endl;
 		i++;
 	}
 }
+

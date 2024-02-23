@@ -1,3 +1,4 @@
+#include <stack>
 
 # pragma once
 
@@ -11,6 +12,10 @@
 class inst
 {
 protected:
-    virtual void ejecutar() = 0;
-    virtual void listar() = 0;
+    virtual void ejecutar(stack<int>& pila, int& pc) = 0;
+    virtual void nombre() = 0;
+ 
+ public:
+	inst();
+	~inst();
 };

@@ -5,6 +5,6 @@ class read: public inst
 {
 public:
     read();
-    void ejecutar(std::stack<int> &pila);
-    string nombre();
+    void ejecutar(std::stack<int> &pila, int& pc) overrides;
+    string nombre() overrides;
 };

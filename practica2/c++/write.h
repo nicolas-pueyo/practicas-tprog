@@ -2,10 +2,11 @@
 #include <string>
 #include <stack>
 
+#pragma once
 
 class write : public inst
 {
 public:
-    void ejecutar(std::stack<int>& pila);
-    std::string nombre();
+    void ejecutar(std::stack<int>& pila, int& pc) overrides;
+    std::string nombre() overrides;
 };

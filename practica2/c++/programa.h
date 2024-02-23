@@ -1,16 +1,17 @@
-#include <vector>
 #include <iostream>
 #include "inst.h"
 
 using namespace std;
+using InstructionPtr = inst *;
 
 class programa
 {
 protected:
-	vector<*inst> instrucciones;
-	int pc;
+	Instrucciones = new InstructionPtr;
+	int pc = 0;
 public:
 	programa();
-	virtual void ejecutar();
-	virtual void listar();
-}
+	~programa();
+	void ejecutar();
+	void listar();
+};

@@ -7,11 +7,12 @@ read::read()
 {
 }
 
-void read::ejecutar(stack<int> &pila){
+void read::ejecutar(stack<int> &pila, int& pc){
     int valor;
-    cout << "Dime un valor para el programa: ";
+    cout << "? ";
     cin >> valor;
     pila.push(valor);
+    pc++;
 }
 
 string read::nombre()
