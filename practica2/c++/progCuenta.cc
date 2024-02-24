@@ -1,19 +1,19 @@
-#include <vector>
 #include "progCuenta.h"
 #include "read.h"
 #include "suma.h"
 #include "write.h"
 #include "dup.h"
 #include "push.h"
+#include "jumpif.h"
 
 progCuenta::progCuenta()
-: programa::programa()
+: programa::programa(7)
 {
-	Instrucciones[0] = new read::read();
-	Instrucciones[1] = new dup::dup();
-	Instrucciones[2] = new write::write();
-	Instrucciones[3] = new push::push(-1);
-	Instrucciones[4] = new add:add();
-	Instrucciones[5] = new dup::dup();
-	Instrucciones[6] = new jumpif::jumpif(1);
+	instrucciones[0] = new read();
+	instrucciones[1] = new dup();
+	instrucciones[2] = new write();
+	instrucciones[3] = new push(-1);
+	instrucciones[4] = new add();
+	instrucciones[5] = new dup();	
+	instrucciones[6] = new jumpif(1);
 }

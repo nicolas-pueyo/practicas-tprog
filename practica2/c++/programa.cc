@@ -1,40 +1,39 @@
 #include <stack>
 #include <iomanip>
+#include <iostream>
 #include "programa.h"
 
 using namespace std;
 
-programa::programa()
-	: pc(0), numInst(0);
+programa::programa(int _inst)
+	: pc(0), numInst(_inst)
 {
+	instrucciones = new InstructionPtr[numInst];
 }
 
 
 programa::~programa()
 {
-	for(auto v : instrucciones)
+	for(int i = 0; i< numInst; i++)
 	{
-		delete v;
+		delete instrucciones[i];
 	}
-	delete[] instrucciones;
 }
 
 void programa::ejecutar()
 {
-	stack<int> pila;
-	for(auto v : instrucciones)
+	stack<int32_t> pila;
+	while(pc < numInst)
 	{
-		v->ejecutar(pila, pc);
+		instrucciones[pc]->ejecutar(pila, pc);
 	}
 }
 
 void programa::listar()
 {
-	int i;
-	for(auto v : instrucciones)
+	for(int i = 0; i< numInst; i++)
 	{
-		cout << i << "   " << v->nombre() << endl;
-		i++;
+		cout << setw(2) << i <<  "   " << instrucciones[i]->nombre() << endl;
 	}
 }
 

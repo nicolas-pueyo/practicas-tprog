@@ -1,23 +1,27 @@
 #include "jumpif.h"
 #include <stack>
+#include <iostream>
 #include <string>
+
+using namespace std;
 
 jumpif::jumpif(int32_t param)
 :	argumento(param)
 {
 }
 
-jumpif::ejecutar(stack<int>& pila, int& pc)
+void jumpif::ejecutar(stack<int32_t>& pila, int32_t& pc) const
 {
-	int tmp = pila.top();
+	int32_t tmp = pila.top();
 	pila.pop();
 	if(tmp >= 0)
 	{
 		pc = argumento;
 	}
+	else pc++;
 }
 
-jumpif::nombre()
+string jumpif::nombre() const
 {
 	return "jumpif " + to_string(argumento);
 }

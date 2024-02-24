@@ -1,6 +1,9 @@
 #include <stack>
+#include <cstdint>
+#include <string>
 
-# pragma once
+#pragma once
+
 
 /*
  * La clase inst, será padre de las distintas instrucciones que implementemos
@@ -11,11 +14,7 @@
 
 class inst
 {
-protected:
-    virtual void ejecutar(stack<int>& pila, int& pc) = 0;
-    virtual void nombre() = 0;
- 
- public:
-	inst();
-	~inst();
+public:
+    virtual void ejecutar(std::stack<std::int32_t>& pila, std::int32_t& pc) const= 0;
+    virtual std::string nombre() const = 0;
 };

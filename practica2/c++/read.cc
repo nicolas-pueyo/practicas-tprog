@@ -3,19 +3,15 @@
 using namespace std;
 
 
-read::read()
-{
-}
-
-void read::ejecutar(stack<int> &pila, int& pc){
-    int valor;
+void read::ejecutar(stack<int32_t> &pila, int32_t& pc) const{
+    int32_t valor;
     cout << "? ";
     cin >> valor;
     pila.push(valor);
     pc++;
 }
 
-string read::nombre()
+string read::nombre() const
 {
     return "read";
 }

@@ -1,18 +1,22 @@
 #include <stack>
-#include "inst.h"
+#include "over.h"
+#include <string>
 
-swp::ejecutar(stack<int32_t>& pila, int& pc)
+using namespace std;
+
+void over::ejecutar(stack<int32_t>& pila, int32_t& pc) const
 {
-	int tmp1 = pila.top();
+	int32_t tmp1 = pila.top();
 	pila.pop();
-	int tmp2= pila.top();
+	int32_t tmp2= pila.top();
 	pila.pop();
 	pila.push(tmp2);
 	pila.push(tmp1);
 	pila.push(tmp2);
+	pc++;
 }
 
-swp::nombre()
+string over::nombre() const
 {
 	return "swap";
 }

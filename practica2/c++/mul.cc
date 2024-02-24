@@ -1,16 +1,20 @@
 #include <stack>
 #include "mul.h"
+#include <string>
 
-mul::ejecutar(stack<int32_t>& pila, int& pc)
+using namespace std;
+
+void mul::ejecutar(stack<int32_t>& pila, int32_t& pc) const
 {
-	int op1 = pila.top();
+	int32_t op1 = pila.top();
 	pila.pop();
-	int op2=pila.top();
+	int32_t op2=pila.top();
 	pila.pop();
 	pila.push(op1*op2);
+	pc++;
 }
 
-string mul::nombre()
+string mul::nombre() const
 {
 	return "mul";
 }

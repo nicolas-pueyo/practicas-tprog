@@ -1,16 +1,17 @@
 #include <iostream>
 #include "inst.h"
 
-using namespace std;
-using InstructionPtr = inst *;
+#pragma once
+
 
 class programa
 {
 protected:
-	Instrucciones = new InstructionPtr;
-	int pc = 0;
+	using InstructionPtr = inst*;
+	InstructionPtr* instrucciones;
+	int32_t pc, numInst;
 public:
-	programa();
+	programa(int _inst = 0);
 	~programa();
 	void ejecutar();
 	void listar();

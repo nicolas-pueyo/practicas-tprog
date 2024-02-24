@@ -4,22 +4,26 @@
 #include "write.h"
 #include "dup.h"
 #include "push.h"
+#include "jumpif.h"
+#include "mul.h"
+#include "swp.h"
+#include "over.h"
 
 progFactorial::progFactorial()
-: programa::programa()
+: programa::programa(14)
 {
-	Instrucciones[0] = new push::push(1);
-	Instrucciones[1] = new read::read();
-	Instrucciones[2] = new swp::swp();
-	Instrucciones[3] = new over::over(-1);	
-	Instrucciones[4] = new mul:mul();
-	Instrucciones[5] = new swp::swp();
-	Instrucciones[6] = new push::push(-1);
-	Instrucciones[7] = new add:add;
-	Instrucciones[8] = new dup::dup();
-	Instrucciones[9] = new push::push(-2);
-	Instrucciones[10] = new add::add();
-	Instrucciones[11] = new jumpif::jumpif(2);
-	Instrucciones[12] = new swp::swp();
-	Instrucciones[13] = new write::write();
+	instrucciones[0] = new push(1);
+	instrucciones[1] = new read();
+	instrucciones[2] = new swp();
+	instrucciones[3] = new over();	
+	instrucciones[4] = new mul();
+	instrucciones[5] = new swp();
+	instrucciones[6] = new push(-1);
+	instrucciones[7] = new add;
+	instrucciones[8] = new dup();
+	instrucciones[9] = new push(-2);
+	instrucciones[10] = new add();
+	instrucciones[11] = new jumpif(2);
+	instrucciones[12] = new swp();
+	instrucciones[13] = new write();
 }

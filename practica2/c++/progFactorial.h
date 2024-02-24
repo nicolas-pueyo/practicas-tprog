@@ -5,5 +5,5 @@
 class progFactorial: public programa 
 {
 public:
-	progCuenta();
+	progFactorial();
 };

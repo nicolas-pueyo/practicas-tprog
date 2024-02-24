@@ -5,10 +5,10 @@
 #include "write.h"
 
 progSuma::progSuma()
-: programa::programa()
+: programa::programa(4)
 {
-	Instrucciones[0] = new read::read();
-	Instrucciones[1] = new read::read();
-	Instrucciones[2] = new add::add();
-	Instrucciones[3] = new write::write():
+	instrucciones[0] = new read();
+	instrucciones[1] = new read();
+	instrucciones[2] = new add();
+	instrucciones[3] = new write();
 }

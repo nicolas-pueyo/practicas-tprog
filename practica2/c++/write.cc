@@ -1,21 +1,18 @@
 #include "write.h"
 #include <iostream>
+#include <cstdint>
 
 using namespace std;
 
-write::write()
+void write::ejecutar(stack<int32_t>& pila, int32_t& pc) const
 {
-}
-
-void write::ejecutar(stack<int>& pila, int pc)
-{
-    int cima = pila.top();
+    int32_t cima = pila.top();
     pila.pop();
     cout << cima << endl;
     pc++;
-}
+}		
 
-string write::nombre()
+string write::nombre() const
 {
     return "write";
 }

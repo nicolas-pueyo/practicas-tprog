@@ -3,10 +3,12 @@
 
 #pragma once
 
+using namespace std;
+
+
 class dup: public inst
 {
 public:
-    dup();
-    void ejecutar(std::stack<int> &pila, int& pc) overrides;
-    string nombre();
+    void ejecutar(stack<int32_t> &pila, int32_t& pc) const override;
+    string nombre() const override;
 };
