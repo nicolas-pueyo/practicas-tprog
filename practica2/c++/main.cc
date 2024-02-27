@@ -37,5 +37,5 @@ int main(int argc, char* argv[])
 	cout << endl;
 	cout << "Ejecución: " << endl;
 	pruebas[2] -> ejecutar();
-	cout << endl;
+	cout << endl << endl;
 }

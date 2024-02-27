@@ -1,4 +1,3 @@
-#include <vector>
 #include "progSuma.h"
 #include "read.h"
 #include "suma.h"
