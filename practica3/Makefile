@@ -1,14 +1,28 @@
-SRCS:=$(wildcard *.java)
+PROG:=main
+SRCS:=main.cc
 
-JAVAC:=javac
+CXX:=g++ -Wall
 
-CLSS:=$(SRCS:.java=.class)
+OBJS:=$(SRCS:.cc=.o)
+DEPS:=$(SRCS:.cc=.d)
 
-all: $(CLSS)
+all: $(PROG)
 
-%.class: %.java
-	$(JAVAC) $<
+$(PROG): $(OBJS)
+	$(CXX) -o $@ $^
+
+.cc.o:
+	$(CXX) -c -MMD $<
+
+.PHONY: edit go
+
+go: $(PROG)
+	$(PROG)
+
+edit:
+	@geany -s -i $(SRCS) *.h &
 
 clean:
-	@rm -f $(CLSS) core tags
+	@rm -f $(PROG) $(OBJS) $(DEPS) *.gch core tags
 
+-include $(DEPS)
