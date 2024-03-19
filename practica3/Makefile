@@ -1,5 +1,5 @@
 PROG:=main
-SRCS:=main.cc
+SRCS:=main.cc item.cc carga.cc toxico.cc servivo.cc producto.cc
 
 CXX:=g++ -Wall
 

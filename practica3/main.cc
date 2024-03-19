@@ -22,13 +22,15 @@ int main(int argc, char** argv)
 	// Productos especiales
 	Toxico* discos_melendi = new Toxico("Discos de Melendi",1,10);
 	Contenedor<Toxico>*	contenedor_toxico = new Contenedor<Toxico>(3);
+
+
 	contenedor_toxico->guardar(discos_melendi);
 #if 0
 	// Esto no deberia compilar
 	contenedor_estandar->guardar(discos_melendi);
 #endif
 
-	SerVivo* elvis_presley = new SerVivo("Elvis Presley",0.1,100);
+	SerVivo* elvis_presley = new SerVivo("Elvis Presley",0.1,100);	
 	Contenedor<SerVivo>* contenedor_elvis = new Contenedor<SerVivo>(1);
 	contenedor_elvis->guardar(elvis_presley);
 
@@ -42,6 +44,7 @@ int main(int argc, char** argv)
 	contenedor_bichos->guardar(contenedor_frogo);
 
 	Camion camion(20);
+
 
 #if 0
 	// Esto no deberia compilar
