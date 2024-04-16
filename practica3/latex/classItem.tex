@@ -1,0 +1,106 @@
+\doxysection{Item Class Reference}
+\hypertarget{classItem}{}\label{classItem}\index{Item@{Item}}
+
+
+{\ttfamily \#include $<$item.\+h$>$}
+
+Inheritance diagram for Item\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classItem}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classItem_a5248383fdec01e1f2872dc2d102e0a87}{Item}} (const string \&\+\_\+nombre, const double \&\+\_\+volumen, const double \&\+\_\+peso)
+\item 
+string \mbox{\hyperlink{classItem_a03a685330fd394b528e2fc641eef2d76}{nombre}} () const
+\item 
+virtual double \mbox{\hyperlink{classItem_a38350849b252eaa55a68246237474b9f}{peso}} () const
+\item 
+virtual double \mbox{\hyperlink{classItem_a805c8968b12b6535a237687ee84d9419}{volumen}} () const
+\item 
+virtual void \mbox{\hyperlink{classItem_aef4ad4ee820df55447639ae3d463f428}{display}} (ostream \&os, int ident) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classItem_a406cde7962a6b42a66b4a53c9a26db2c}\label{classItem_a406cde7962a6b42a66b4a53c9a26db2c} 
+string {\bfseries name}
+\item 
+\Hypertarget{classItem_a233df821274db5027a71bb29d584be5c}\label{classItem_a233df821274db5027a71bb29d584be5c} 
+double {\bfseries volume}
+\item 
+\Hypertarget{classItem_a33ade95cc8bd93d31338d004c014b4f8}\label{classItem_a33ade95cc8bd93d31338d004c014b4f8} 
+double {\bfseries weight}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase item. Representa un objeto que tiene nombre, peso y volumen 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classItem_a5248383fdec01e1f2872dc2d102e0a87}\label{classItem_a5248383fdec01e1f2872dc2d102e0a87} 
+\index{Item@{Item}!Item@{Item}}
+\index{Item@{Item}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{Item()}{Item()}}
+{\footnotesize\ttfamily Item\+::\+Item (\begin{DoxyParamCaption}\item[{const string \&}]{\+\_\+nombre,  }\item[{const double \&}]{\+\_\+volumen,  }\item[{const double \&}]{\+\_\+peso }\end{DoxyParamCaption})}
+
+Constructor de la clase item 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+nombre} & El nombre del objeto \\
+\hline
+{\em \+\_\+volumen} & El volumen del objeto \\
+\hline
+{\em \+\_\+peso} & El peso del objeto \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classItem_aef4ad4ee820df55447639ae3d463f428}\label{classItem_aef4ad4ee820df55447639ae3d463f428} 
+\index{Item@{Item}!display@{display}}
+\index{display@{display}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void Item\+::display (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{int}]{ident }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Método que muestra por pantalla la información del contenedor y lo que carga 
+\begin{DoxyParams}{Parameters}
+{\em os} & El flujo por el que se escribirá la información \\
+\hline
+{\em ident} & Cuántos espacios hay que dejar al principio de la línea \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classCamion_a4fe3f735ba491a4f6ddf8fafca56a8df}{Camion}}, and \mbox{\hyperlink{classContenedor_ae884d2fae704a12af73df8c9d73ff33b}{Contenedor$<$ T $>$}}.
+
+\Hypertarget{classItem_a03a685330fd394b528e2fc641eef2d76}\label{classItem_a03a685330fd394b528e2fc641eef2d76} 
+\index{Item@{Item}!nombre@{nombre}}
+\index{nombre@{nombre}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{nombre()}{nombre()}}
+{\footnotesize\ttfamily string Item\+::nombre (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Método para obtener el nombre del objeto \Hypertarget{classItem_a38350849b252eaa55a68246237474b9f}\label{classItem_a38350849b252eaa55a68246237474b9f} 
+\index{Item@{Item}!peso@{peso}}
+\index{peso@{peso}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{peso()}{peso()}}
+{\footnotesize\ttfamily double Item\+::peso (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Método para obtener el peso del objeto 
+
+Reimplemented in \mbox{\hyperlink{classCamion_a5e662ca2252c714fdc40289e7599c750}{Camion}}, and \mbox{\hyperlink{classContenedor_ab1ff7874ee17c7b38203eb9df01bf7ba}{Contenedor$<$ T $>$}}.
+
+\Hypertarget{classItem_a805c8968b12b6535a237687ee84d9419}\label{classItem_a805c8968b12b6535a237687ee84d9419} 
+\index{Item@{Item}!volumen@{volumen}}
+\index{volumen@{volumen}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{volumen()}{volumen()}}
+{\footnotesize\ttfamily double Item\+::volumen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Método para obtener el volumen del objeto 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+item.\+h\item 
+item.\+cc\end{DoxyCompactItemize}

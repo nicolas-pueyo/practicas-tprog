@@ -1,0 +1,60 @@
+\doxysection{Producto Class Reference}
+\hypertarget{classProducto}{}\label{classProducto}\index{Producto@{Producto}}
+
+
+{\ttfamily \#include $<$producto.\+h$>$}
+
+Inheritance diagram for Producto\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classProducto}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classProducto_a0c77a1e4fe155ace1403fc89c79dda84}\label{classProducto_a0c77a1e4fe155ace1403fc89c79dda84} 
+{\bfseries Producto} (const string \&\+\_\+nombre, const double \&\+\_\+volumen, const double \&\+\_\+peso)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCarga}{Carga}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCarga_ad90fd009424fc3b7a166e14058a4261d}{Carga}} (const string \&\+\_\+nombre, const double \&\+\_\+volumen, const double \&\+\_\+peso)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classItem}{Item}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classItem_a5248383fdec01e1f2872dc2d102e0a87}{Item}} (const string \&\+\_\+nombre, const double \&\+\_\+volumen, const double \&\+\_\+peso)
+\item 
+string \mbox{\hyperlink{classItem_a03a685330fd394b528e2fc641eef2d76}{nombre}} () const
+\item 
+virtual double \mbox{\hyperlink{classItem_a38350849b252eaa55a68246237474b9f}{peso}} () const
+\item 
+virtual double \mbox{\hyperlink{classItem_a805c8968b12b6535a237687ee84d9419}{volumen}} () const
+\item 
+virtual void \mbox{\hyperlink{classItem_aef4ad4ee820df55447639ae3d463f428}{display}} (ostream \&os, int ident) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classCarga}{Carga}}}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{classCarga_a88b5a5ec5323e4d072a60f96b59c045f}{tipo}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classItem}{Item}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries name}
+\item 
+double {\bfseries volume}
+\item 
+double {\bfseries weight}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase producto. Representa un producto estándar. Mutuamente excluyente con tóxicos y seres vivos 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+producto.\+h\item 
+producto.\+cc\end{DoxyCompactItemize}

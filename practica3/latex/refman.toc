@@ -1,0 +1,67 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Hierarchical Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Class Hierarchy}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Class Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Class List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}File Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}File List}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Class Documentation}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Almacen$<$ T $>$ Class Template Reference}{7}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{7}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Constructor \& Destructor Documentation}{7}{subsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}Almacen()}{7}{subsubsection.4.1.2.1}%
+\contentsline {subsubsection}{\numberline {4.1.2.2}$\sim $Almacen()}{8}{subsubsection.4.1.2.2}%
+\contentsline {subsection}{\numberline {4.1.3}Member Function Documentation}{8}{subsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.3.1}guardar()}{8}{subsubsection.4.1.3.1}%
+\contentsline {section}{\numberline {4.2}Camion Class Reference}{8}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Detailed Description}{9}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Constructor \& Destructor Documentation}{9}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}Camion()}{9}{subsubsection.4.2.2.1}%
+\contentsline {subsection}{\numberline {4.2.3}Member Function Documentation}{10}{subsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.3.1}display()}{10}{subsubsection.4.2.3.1}%
+\contentsline {subsubsection}{\numberline {4.2.3.2}peso()}{10}{subsubsection.4.2.3.2}%
+\contentsline {subsection}{\numberline {4.2.4}Friends And Related Symbol Documentation}{10}{subsection.4.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.4.1}operator$<$$<$}{10}{subsubsection.4.2.4.1}%
+\contentsline {section}{\numberline {4.3}Carga Class Reference}{11}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Detailed Description}{12}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Constructor \& Destructor Documentation}{12}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}Carga()}{12}{subsubsection.4.3.2.1}%
+\contentsline {subsection}{\numberline {4.3.3}Member Function Documentation}{12}{subsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.3.1}tipo()}{12}{subsubsection.4.3.3.1}%
+\contentsline {section}{\numberline {4.4}Contenedor$<$ T $>$ Class Template Reference}{12}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Detailed Description}{13}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Constructor \& Destructor Documentation}{13}{subsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.1}Contenedor()}{13}{subsubsection.4.4.2.1}%
+\contentsline {subsection}{\numberline {4.4.3}Member Function Documentation}{14}{subsection.4.4.3}%
+\contentsline {subsubsection}{\numberline {4.4.3.1}display()}{14}{subsubsection.4.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.4.3.2}peso()}{14}{subsubsection.4.4.3.2}%
+\contentsline {section}{\numberline {4.5}Item Class Reference}{14}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Detailed Description}{15}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Constructor \& Destructor Documentation}{15}{subsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.2.1}Item()}{15}{subsubsection.4.5.2.1}%
+\contentsline {subsection}{\numberline {4.5.3}Member Function Documentation}{15}{subsection.4.5.3}%
+\contentsline {subsubsection}{\numberline {4.5.3.1}display()}{15}{subsubsection.4.5.3.1}%
+\contentsline {subsubsection}{\numberline {4.5.3.2}nombre()}{16}{subsubsection.4.5.3.2}%
+\contentsline {subsubsection}{\numberline {4.5.3.3}peso()}{16}{subsubsection.4.5.3.3}%
+\contentsline {subsubsection}{\numberline {4.5.3.4}volumen()}{16}{subsubsection.4.5.3.4}%
+\contentsline {section}{\numberline {4.6}Producto Class Reference}{16}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Detailed Description}{17}{subsection.4.6.1}%
+\contentsline {section}{\numberline {4.7}Ser\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vivo Class Reference}{17}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Detailed Description}{18}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Member Function Documentation}{18}{subsection.4.7.2}%
+\contentsline {subsubsection}{\numberline {4.7.2.1}tipo()}{18}{subsubsection.4.7.2.1}%
+\contentsline {section}{\numberline {4.8}Toxico Class Reference}{19}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Detailed Description}{19}{subsection.4.8.1}%
+\contentsline {subsection}{\numberline {4.8.2}Member Function Documentation}{19}{subsection.4.8.2}%
+\contentsline {subsubsection}{\numberline {4.8.2.1}tipo()}{19}{subsubsection.4.8.2.1}%
+\contentsline {chapter}{\numberline {5}File Documentation}{21}{chapter.5}%
+\contentsline {section}{\numberline {5.1}almacen.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{21}{section.5.1}%
+\contentsline {section}{\numberline {5.2}camion.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{21}{section.5.2}%
+\contentsline {section}{\numberline {5.3}carga.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{22}{section.5.3}%
+\contentsline {section}{\numberline {5.4}contenedor.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{22}{section.5.4}%
+\contentsline {section}{\numberline {5.5}item.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{22}{section.5.5}%
+\contentsline {section}{\numberline {5.6}practica3.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{23}{section.5.6}%
+\contentsline {section}{\numberline {5.7}producto.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{23}{section.5.7}%
+\contentsline {section}{\numberline {5.8}servivo.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{23}{section.5.8}%
+\contentsline {section}{\numberline {5.9}toxico.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{23}{section.5.9}%
+\contentsline {chapter}{Index}{25}{section*.51}%

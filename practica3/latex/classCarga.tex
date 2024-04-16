@@ -1,0 +1,81 @@
+\doxysection{Carga Class Reference}
+\hypertarget{classCarga}{}\label{classCarga}\index{Carga@{Carga}}
+
+
+{\ttfamily \#include $<$carga.\+h$>$}
+
+Inheritance diagram for Carga\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classCarga}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCarga_ad90fd009424fc3b7a166e14058a4261d}{Carga}} (const string \&\+\_\+nombre, const double \&\+\_\+volumen, const double \&\+\_\+peso)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classItem}{Item}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classItem_a5248383fdec01e1f2872dc2d102e0a87}{Item}} (const string \&\+\_\+nombre, const double \&\+\_\+volumen, const double \&\+\_\+peso)
+\item 
+string \mbox{\hyperlink{classItem_a03a685330fd394b528e2fc641eef2d76}{nombre}} () const
+\item 
+virtual double \mbox{\hyperlink{classItem_a38350849b252eaa55a68246237474b9f}{peso}} () const
+\item 
+virtual double \mbox{\hyperlink{classItem_a805c8968b12b6535a237687ee84d9419}{volumen}} () const
+\item 
+virtual void \mbox{\hyperlink{classItem_aef4ad4ee820df55447639ae3d463f428}{display}} (ostream \&os, int ident) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{classCarga_a88b5a5ec5323e4d072a60f96b59c045f}{tipo}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classItem}{Item}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries name}
+\item 
+double {\bfseries volume}
+\item 
+double {\bfseries weight}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase carga. Representa un objeo común a ser transportado. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCarga_ad90fd009424fc3b7a166e14058a4261d}\label{classCarga_ad90fd009424fc3b7a166e14058a4261d} 
+\index{Carga@{Carga}!Carga@{Carga}}
+\index{Carga@{Carga}!Carga@{Carga}}
+\doxysubsubsection{\texorpdfstring{Carga()}{Carga()}}
+{\footnotesize\ttfamily Carga\+::\+Carga (\begin{DoxyParamCaption}\item[{const string \&}]{\+\_\+nombre,  }\item[{const double \&}]{\+\_\+volumen,  }\item[{const double \&}]{\+\_\+peso }\end{DoxyParamCaption})}
+
+Constructor de la clase carga 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+nombre} & El nombre de la carga \\
+\hline
+{\em \+\_\+volumen} & El volumen de la carga \\
+\hline
+{\em \+\_\+peso} & El peso de la carga \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCarga_a88b5a5ec5323e4d072a60f96b59c045f}\label{classCarga_a88b5a5ec5323e4d072a60f96b59c045f} 
+\index{Carga@{Carga}!tipo@{tipo}}
+\index{tipo@{tipo}!Carga@{Carga}}
+\doxysubsubsection{\texorpdfstring{tipo()}{tipo()}}
+{\footnotesize\ttfamily string Carga\+::tipo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Método estático que devuelve el tipo de la clase 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+carga.\+h\item 
+carga.\+cc\end{DoxyCompactItemize}

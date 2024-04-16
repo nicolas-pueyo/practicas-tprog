@@ -1,0 +1,38 @@
+\doxysection{almacen.\+h}
+\hypertarget{almacen_8h_source}{}\label{almacen_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classAlmacen}{Almacen}}\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{double}\ capacidad;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{double}\ volGastado;}
+\DoxyCodeLine{00012\ \ \ \ \ vector<T*>\ elemento;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{classAlmacen_ad4a9058984f5955fdc2fbea28ba23e6f}{Almacen}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ \_capacidad)}
+\DoxyCodeLine{00020\ \ \ \ \ :\ capacidad(\_capacidad),\ volGastado(0)}
+\DoxyCodeLine{00021\ \ \ \ \ \{\}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classAlmacen_af80802ec0cf55f720d7962932f0a9a39}{guardar}}(T*\ \_guardable)\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ guardOK\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\_guardable-\/>volumen()\ <=capacidad-\/volGastado)\{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ volGastado+=\_guardable-\/>volumen();}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ elemento.push\_back(\_guardable);}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ guardOK\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ guardOK;}
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classAlmacen_adf5a704b6f3dc652601c9c5d9254c67f}{\string~Almacen}}()}
+\DoxyCodeLine{00042\ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\&\ i\ :\ elemento)}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ i;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00047\ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \};}
+
+\end{DoxyCode}

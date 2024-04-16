@@ -1,0 +1,37 @@
+\doxysection{camion.\+h}
+\hypertarget{camion_8h_source}{}\label{camion_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}almacen.h"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}item.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}carga.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCamion}{Camion}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classAlmacen}{Almacen}}<Carga>,\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classItem}{Item}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{classCamion_a845717d96139cfdeddaf33ef959d222d}{Camion}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ \_capacidad)}
+\DoxyCodeLine{00016\ \ \ \ \ :\ \mbox{\hyperlink{classAlmacen}{Almacen}}<\mbox{\hyperlink{classCarga}{Carga}}>(\_capacidad),\ \mbox{\hyperlink{classItem}{Item}}(\textcolor{stringliteral}{"{}Camion"{}},\ \_capacidad,\ 0)}
+\DoxyCodeLine{00017\ \ \ \ \ \{\}}
+\DoxyCodeLine{00018\ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classCamion_a5e662ca2252c714fdc40289e7599c750}{peso}}()\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ pesoTotal\ =\ 0;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ i\ :\ elemento)\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ pesoTotal\ +=\ i\ -\/>\ \mbox{\hyperlink{classCamion_a5e662ca2252c714fdc40289e7599c750}{peso}}();}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ pesoTotal;}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCamion_a4fe3f735ba491a4f6ddf8fafca56a8df}{display}}(ostream\&\ os,\ \textcolor{keywordtype}{int}\ ident)\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ identation(ident,\ \textcolor{charliteral}{'\ '});}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ os\ <<\ \ fixed\ <<\ identation\ <<\ \mbox{\hyperlink{classItem_a03a685330fd394b528e2fc641eef2d76}{nombre}}()\ <<\ \textcolor{stringliteral}{"{}\ ["{}}\ <<\ setprecision(1)\ <<\ \mbox{\hyperlink{classItem_a805c8968b12b6535a237687ee84d9419}{volumen}}()\ <<\ \textcolor{stringliteral}{"{}\ m3]\ ["{}}\ <<\ \mbox{\hyperlink{classCamion_a5e662ca2252c714fdc40289e7599c750}{peso}}()\ <<\ \textcolor{stringliteral}{"{}\ kgs]\(\backslash\)n"{}};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ i\ :\ elemento)\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ i-\/>display(os,ident+2);\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{friend}\ ostream\&\ \mbox{\hyperlink{classCamion_a1b562ee894ba3aa58392118d90882a73}{operator<<}}(ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classCamion}{Camion}}\&\ c)\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ c.\mbox{\hyperlink{classCamion_a4fe3f735ba491a4f6ddf8fafca56a8df}{display}}(os,\ 0);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ os;}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \};}
+
+\end{DoxyCode}

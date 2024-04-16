@@ -1,0 +1,134 @@
+\doxysection{Camion Class Reference}
+\hypertarget{classCamion}{}\label{classCamion}\index{Camion@{Camion}}
+
+
+{\ttfamily \#include $<$camion.\+h$>$}
+
+Inheritance diagram for Camion\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classCamion}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCamion_a845717d96139cfdeddaf33ef959d222d}{Camion}} (const double \&\+\_\+capacidad)
+\item 
+double \mbox{\hyperlink{classCamion_a5e662ca2252c714fdc40289e7599c750}{peso}} () const override
+\item 
+void \mbox{\hyperlink{classCamion_a4fe3f735ba491a4f6ddf8fafca56a8df}{display}} (ostream \&os, int ident) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classAlmacen}{Almacen$<$ Carga $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAlmacen_ad4a9058984f5955fdc2fbea28ba23e6f}{Almacen}} (const double \&\+\_\+capacidad)
+\item 
+bool \mbox{\hyperlink{classAlmacen_af80802ec0cf55f720d7962932f0a9a39}{guardar}} (\mbox{\hyperlink{classCarga}{Carga}} \texorpdfstring{$\ast$}{*}\+\_\+guardable)
+\item 
+virtual \mbox{\hyperlink{classAlmacen_adf5a704b6f3dc652601c9c5d9254c67f}{\texorpdfstring{$\sim$}{\string~}\+Almacen}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classItem}{Item}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classItem_a5248383fdec01e1f2872dc2d102e0a87}{Item}} (const string \&\+\_\+nombre, const double \&\+\_\+volumen, const double \&\+\_\+peso)
+\item 
+string \mbox{\hyperlink{classItem_a03a685330fd394b528e2fc641eef2d76}{nombre}} () const
+\item 
+virtual double \mbox{\hyperlink{classItem_a805c8968b12b6535a237687ee84d9419}{volumen}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \mbox{\hyperlink{classCamion_a1b562ee894ba3aa58392118d90882a73}{operator$<$$<$}} (ostream \&os, const \mbox{\hyperlink{classCamion}{Camion}} \&c)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classAlmacen}{Almacen$<$ Carga $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+double {\bfseries capacidad}
+\item 
+double {\bfseries vol\+Gastado}
+\item 
+vector$<$ \mbox{\hyperlink{classCarga}{Carga}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries elemento}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classItem}{Item}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries name}
+\item 
+double {\bfseries volume}
+\item 
+double {\bfseries weight}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase camión. Representa un objeto que puede llevar cargas y no puede llevarse a sí mismo 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCamion_a845717d96139cfdeddaf33ef959d222d}\label{classCamion_a845717d96139cfdeddaf33ef959d222d} 
+\index{Camion@{Camion}!Camion@{Camion}}
+\index{Camion@{Camion}!Camion@{Camion}}
+\doxysubsubsection{\texorpdfstring{Camion()}{Camion()}}
+{\footnotesize\ttfamily Camion\+::\+Camion (\begin{DoxyParamCaption}\item[{const double \&}]{\+\_\+capacidad }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor de la clase camión 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+capacidad} & La capacidad que tendrá el camión \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCamion_a4fe3f735ba491a4f6ddf8fafca56a8df}\label{classCamion_a4fe3f735ba491a4f6ddf8fafca56a8df} 
+\index{Camion@{Camion}!display@{display}}
+\index{display@{display}!Camion@{Camion}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void Camion\+::display (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{int}]{ident }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Método que muestra por pantalla la información del camión y lo que carga 
+\begin{DoxyParams}{Parameters}
+{\em os} & El flujo por el que se escribirá la información \\
+\hline
+{\em ident} & Cuántos espacios hay que dejar al principio de la línea \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classItem_aef4ad4ee820df55447639ae3d463f428}{Item}}.
+
+\Hypertarget{classCamion_a5e662ca2252c714fdc40289e7599c750}\label{classCamion_a5e662ca2252c714fdc40289e7599c750} 
+\index{Camion@{Camion}!peso@{peso}}
+\index{peso@{peso}!Camion@{Camion}}
+\doxysubsubsection{\texorpdfstring{peso()}{peso()}}
+{\footnotesize\ttfamily double Camion\+::peso (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Redefinición del método \doxylink{classCamion_a5e662ca2252c714fdc40289e7599c750}{peso()} de la clase padre item 
+
+Reimplemented from \mbox{\hyperlink{classItem_a38350849b252eaa55a68246237474b9f}{Item}}.
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{classCamion_a1b562ee894ba3aa58392118d90882a73}\label{classCamion_a1b562ee894ba3aa58392118d90882a73} 
+\index{Camion@{Camion}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Camion@{Camion}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classCamion}{Camion}} \&}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Redefinición del operador \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} para camiones 
+\begin{DoxyParams}{Parameters}
+{\em os} & El flujo con el que interactua \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} \\
+\hline
+{\em c} & El objeto de tipo camión que se introduce en el flujo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+El flujo os actualizado 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+camion.\+h\end{DoxyCompactItemize}

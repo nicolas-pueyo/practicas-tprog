@@ -1,0 +1,90 @@
+\begin{theindex}
+
+  \item {\texorpdfstring{$\sim$}{\string~}Almacen}
+    \subitem {Almacen$<$ T $>$}, \hyperpage{8}
+
+  \indexspace
+
+  \item {Almacen}
+    \subitem {Almacen$<$ T $>$}, \hyperpage{7}
+  \item {Almacen$<$ T $>$}, \hyperpage{7}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Almacen}, \hyperpage{8}
+    \subitem {Almacen}, \hyperpage{7}
+    \subitem {guardar}, \hyperpage{8}
+
+  \indexspace
+
+  \item {Camion}, \hyperpage{8}
+    \subitem {Camion}, \hyperpage{9}
+    \subitem {display}, \hyperpage{10}
+    \subitem {operator$<$$<$}, \hyperpage{10}
+    \subitem {peso}, \hyperpage{10}
+  \item {Carga}, \hyperpage{11}
+    \subitem {Carga}, \hyperpage{12}
+    \subitem {tipo}, \hyperpage{12}
+  \item {Contenedor}
+    \subitem {Contenedor$<$ T $>$}, \hyperpage{13}
+  \item {Contenedor$<$ T $>$}, \hyperpage{12}
+    \subitem {Contenedor}, \hyperpage{13}
+    \subitem {display}, \hyperpage{14}
+    \subitem {peso}, \hyperpage{14}
+
+  \indexspace
+
+  \item {display}
+    \subitem {Camion}, \hyperpage{10}
+    \subitem {Contenedor$<$ T $>$}, \hyperpage{14}
+    \subitem {Item}, \hyperpage{15}
+
+  \indexspace
+
+  \item {guardar}
+    \subitem {Almacen$<$ T $>$}, \hyperpage{8}
+
+  \indexspace
+
+  \item {Item}, \hyperpage{14}
+    \subitem {display}, \hyperpage{15}
+    \subitem {Item}, \hyperpage{15}
+    \subitem {nombre}, \hyperpage{16}
+    \subitem {peso}, \hyperpage{16}
+    \subitem {volumen}, \hyperpage{16}
+
+  \indexspace
+
+  \item {nombre}
+    \subitem {Item}, \hyperpage{16}
+
+  \indexspace
+
+  \item {operator$<$$<$}
+    \subitem {Camion}, \hyperpage{10}
+
+  \indexspace
+
+  \item {peso}
+    \subitem {Camion}, \hyperpage{10}
+    \subitem {Contenedor$<$ T $>$}, \hyperpage{14}
+    \subitem {Item}, \hyperpage{16}
+  \item {Producto}, \hyperpage{16}
+
+  \indexspace
+
+  \item {SerVivo}, \hyperpage{17}
+    \subitem {tipo}, \hyperpage{18}
+
+  \indexspace
+
+  \item {tipo}
+    \subitem {Carga}, \hyperpage{12}
+    \subitem {SerVivo}, \hyperpage{18}
+    \subitem {Toxico}, \hyperpage{19}
+  \item {Toxico}, \hyperpage{19}
+    \subitem {tipo}, \hyperpage{19}
+
+  \indexspace
+
+  \item {volumen}
+    \subitem {Item}, \hyperpage{16}
+
+\end{theindex}

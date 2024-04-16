@@ -1,0 +1,257 @@
+import java.util.Vector;
+
+public class Shell {
+    private Directorio root;
+    private Vector<Nodo> rutaActiva; 
+
+    public Shell() {
+        this.root = new Directorio("/");
+        this.rutaActiva = new Vector<>();
+        this.rutaActiva.add(root);
+    }
+
+    public String pwd() {
+        String ruta = "";
+        int ct = 0;
+        boolean primero = true;
+        for(Nodo node : rutaActiva) {
+            if(primero) {
+                primero = false;
+                ruta +=node.name();
+            }
+            else {
+                ruta += node.name() + (ct != rutaActiva.size()-1 ? "/" : "");
+            }
+            ct++;   
+        }
+        return ruta;
+    }
+
+    public String ls() {
+        String lista = "";
+        Nodo actual = rutaActiva.lastElement();
+        if(actual instanceof Directorio) {
+            lista = ((Directorio)actual).listar(); 
+        }
+        else if (actual instanceof Enlace) {
+            if(((Enlace)actual).getLink() instanceof Directorio) { //enlace linkeado a un directorio
+                lista = ((Directorio)(((Enlace)actual).getLink())).listar(); //Devolver como directorio el nodo linkado en el nodo enlace
+            }
+        }
+        return lista;
+    }
+
+    public String du() {
+        String lista = "";
+        Nodo actual = rutaActiva.lastElement();
+        if(actual instanceof Directorio) {
+            lista = ((Directorio)actual).listarTam();
+        }
+        if(actual instanceof Enlace) {
+            lista = ((Directorio)(((Enlace)actual).getLink())).listarTam();
+        }
+        return lista;
+    }
+
+    
+    public void vi(String name, int size) {
+        Nodo actual = rutaActiva.lastElement();
+        if(actual instanceof Enlace) {
+            actual=(Directorio)(((Enlace)actual).getLink());
+        }
+        try {
+            Nodo fichero = ((Directorio) actual).esta(name);
+            if(fichero instanceof Fichero) {
+                ((Fichero) fichero).setTam(size);
+            }
+            else {
+                throw new ExcepcionNotFile(name + " no es un fichero.");
+            }
+        }
+        catch (ExcepcionNotFile e) {
+            System.out.println(e.what());
+        }
+        catch (ExcepcionNotFound e) {
+            ((Directorio)actual).guardar(new Fichero(name,size));
+        }
+
+    }   
+
+    public void mkdir(String name) {
+        Nodo actual = rutaActiva.lastElement();
+        if(actual instanceof Enlace) {
+            actual = (Directorio)(((Enlace)actual).getLink());
+        }
+        ((Directorio)actual).guardar(new Directorio(name)); //ta mal creo, estamos añadiendo a actual pero no necesariamente sera actual no? creo ns
+    }
+
+
+    public Directorio resolvePath(String path, int rDepth) throws ExcepcionArbolFicheros, ExcepcionNotFound {
+        //gestionar antes de llamar en cada funcion
+        Directorio actual = null;
+        if(path.startsWith("/")) {
+            actual = root;
+            path = path.substring(1);
+        }
+        else {
+            Nodo tmp = rutaActiva.lastElement();
+            if(tmp instanceof Enlace) {
+                while(tmp instanceof Enlace);
+                actual = (Directorio)(((Enlace)tmp).getLink());
+            }
+            else if (tmp instanceof Directorio) {
+                actual = (Directorio)tmp;
+            }
+        }
+        //int pathLength = pathDirCount(path);
+        String[] parsedPath = path.split("/"); //parseamos por barra
+        for(int i = 0; i<parsedPath.length - rDepth; i++) { //resuelve el path hasta el directorio rDepth-anterior al último
+            String candidato = parsedPath[i];    
+            Nodo prueba = null;
+            if(! candidato.equals(".")) { //si es . no se hace nada
+                if(candidato.equals("..")) {
+                    if(actual == root) {
+                        throw new ExcepcionArbolFicheros("Ya en la raíz.");
+                    }
+                    rutaActiva.remove(rutaActiva.size()-1);
+                    prueba = rutaActiva.lastElement();
+                    if(prueba instanceof Directorio) {
+                        actual = (Directorio)prueba;
+                    }
+                    if(prueba instanceof Enlace) {
+                        actual = (Directorio)((Enlace)prueba).getLink();
+                    }
+                }
+                else {
+                    try {
+                        prueba = actual.esta(candidato);
+                        if(prueba instanceof Directorio) {
+                            actual = (Directorio)prueba;
+                        }
+                        else if(prueba instanceof Enlace) {
+                            actual = (Directorio)(((Enlace)prueba).getLink());
+                        }
+                        else  {
+                            throw new ExcepcionNotDir(candidato + " no es un directorio");
+                        }
+                    }
+                    catch (ExcepcionNotFound e) {
+                        throw e;
+                    }
+                    catch (ExcepcionNotDir e) {
+                        System.out.println(e.what());
+                    }
+                }
+            }
+            System.out.println("Nombre de actual = " + actual.name());
+        }
+        return actual;
+    }
+    /* 
+    public int pathDirCount(String path) {
+        int nbars=0;
+        for (int i = 0;i < (path.length()-1); i++) {
+            if(path.charAt(i) == '/') {
+                nbars++;
+            }
+        }
+        return nbars + 1;
+    }
+    */
+
+    public void cd(String path) throws ArrayIndexOutOfBoundsException, ExcepcionArbolFicheros {
+        if(path.equals("")) {
+            throw new ArrayIndexOutOfBoundsException();
+        }
+        if(path.equals("/")) {
+            rutaActiva.clear();
+            rutaActiva.add(root);
+        }
+        else {
+        try {
+                Directorio actual = resolvePath(path,0);
+                rutaActiva.add(actual);
+            }
+            catch (ExcepcionNotFound e) {
+                System.out.println(e.what());  
+            }
+            catch(ExcepcionArbolFicheros e) {
+                System.out.println(e.what());
+                throw e;
+            }
+        }
+    }
+    
+    public int stat(String path) throws ArrayIndexOutOfBoundsException, ExcepcionArbolFicheros {
+        if(path.equals("")) {
+            throw new ArrayIndexOutOfBoundsException();
+        }
+        int r = 0;
+        Vector<Nodo> backup = rutaActiva; 
+        Directorio actual = null;
+        try {
+            actual = resolvePath(path,1);
+        }
+        catch(ExcepcionArbolFicheros e) {
+            System.out.println(e.what());
+            throw e;
+        }
+        rutaActiva = backup; //esto la devuelve a como era antes
+        String[] parsedPath=path.split("/");
+        Nodo posible = null;
+        try {
+            posible = actual.esta(parsedPath[parsedPath.length-1]);
+            r=posible.getSize();
+        }
+        catch(ExcepcionNotFound e) {
+            System.out.println(e.what());
+        }
+        return r;
+    }
+
+    public void ln(String path, String name) throws ExcepcionArbolFicheros {
+        Vector<Nodo> backup = rutaActiva; 
+        Directorio actual = null;
+        try {
+            actual = resolvePath(path,1);
+        }
+        catch(ExcepcionArbolFicheros e) {
+            throw e;
+        }
+        rutaActiva = backup; //esto la devuelve a como era antes
+        String[] parsedPath = path.split("/");
+        Nodo posible = null;
+        try {
+            posible = actual.esta(parsedPath[parsedPath.length-1]);
+            actual.guardar(new Enlace(posible,name));
+        }
+        catch (ExcepcionNotFound e) {
+            System.out.println(e.what());
+        }
+        // no se codearlo, pero la idea aqui es: creas un nuevo enlace en el directorio actual, que se construlle con el path del nodo al que enlazas
+    }
+
+    public void rm(String path) throws ExcepcionArbolFicheros {
+        if(path.equals("")) {
+            throw new ArrayIndexOutOfBoundsException();
+        }
+        Vector<Nodo> backup = rutaActiva; 
+        Directorio actual = null;
+        try {
+            actual = resolvePath(path,1);
+        }
+        catch(ExcepcionArbolFicheros e) {
+            throw e;
+        }
+        rutaActiva = backup; //esto la devuelve a como era antes
+        String[] parsedPath = path.split("/");
+        Nodo posible = null;
+        try {
+            posible = actual.esta(parsedPath[parsedPath.length-1]);
+        }
+        catch (ExcepcionNotFound e) {
+            System.out.println(e.what());
+        }
+        actual.eliminar(posible.name());
+    }
+}

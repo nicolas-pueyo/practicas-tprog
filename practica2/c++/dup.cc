@@ -17,4 +17,3 @@ string dup::nombre() const
 {
 	return "dup";
 }
-

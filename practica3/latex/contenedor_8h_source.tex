@@ -1,0 +1,35 @@
+\doxysection{contenedor.\+h}
+\hypertarget{contenedor_8h_source}{}\label{contenedor_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}carga.h"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}almacen.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classContenedor}{Contenedor}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classAlmacen}{Almacen}}<T>,\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classCarga}{Carga}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{classContenedor_abedc28d890427ba463a6e7a4328735f7}{Contenedor}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ \_capacidad)\ \textcolor{comment}{//\ quitado\ que\ lleva}}
+\DoxyCodeLine{00019\ \ \ \ \ :\ \mbox{\hyperlink{classAlmacen}{Almacen}}<T>(\_capacidad),\ \mbox{\hyperlink{classCarga}{Carga}}(\textcolor{stringliteral}{"{}Contenedor"{}},\ \_capacidad,\ 0)}
+\DoxyCodeLine{00020\ \ \ \ \ \{\}}
+\DoxyCodeLine{00021\ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classContenedor_ae884d2fae704a12af73df8c9d73ff33b}{display}}(ostream\&\ os,\ \textcolor{keywordtype}{int}\ ident)\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ identation(ident,\textcolor{charliteral}{'\ '});}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ os\ <<\ identation\ <<\ name\ <<\ \textcolor{stringliteral}{"{}\ ["{}}\ <<\ setprecision(1)\ <<\ volume\ <<\ \textcolor{stringliteral}{"{}\ m3]\ ["{}}\ <<\ \mbox{\hyperlink{classContenedor_ab1ff7874ee17c7b38203eb9df01bf7ba}{peso}}()\ <<\ \textcolor{stringliteral}{"{}\ kg]\ de\ "{}}\ <<\ T::tipo()\ <<\ endl;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ i\ :\ \mbox{\hyperlink{classAlmacen}{Almacen<T>::elemento}})\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ i-\/>display(os,\ ident+2);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \ \ \ \ \}}
+\DoxyCodeLine{00034\ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classContenedor_ab1ff7874ee17c7b38203eb9df01bf7ba}{peso}}()\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ pesoTotal\ =\ 0;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ elementos\ :\ \mbox{\hyperlink{classAlmacen}{Almacen<T>::elemento}})\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ pesoTotal\ +=\ elementos-\/>peso();}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ pesoTotal;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \ \};}
+
+\end{DoxyCode}

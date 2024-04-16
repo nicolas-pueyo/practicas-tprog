@@ -1,0 +1,83 @@
+\doxysection{Almacen\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classAlmacen}{}\label{classAlmacen}\index{Almacen$<$ T $>$@{Almacen$<$ T $>$}}
+
+
+{\ttfamily \#include $<$almacen.\+h$>$}
+
+Inheritance diagram for Almacen\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classAlmacen}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAlmacen_ad4a9058984f5955fdc2fbea28ba23e6f}{Almacen}} (const double \&\+\_\+capacidad)
+\item 
+bool \mbox{\hyperlink{classAlmacen_af80802ec0cf55f720d7962932f0a9a39}{guardar}} (T \texorpdfstring{$\ast$}{*}\+\_\+guardable)
+\item 
+virtual \mbox{\hyperlink{classAlmacen_adf5a704b6f3dc652601c9c5d9254c67f}{\texorpdfstring{$\sim$}{\string~}\+Almacen}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classAlmacen_adba792b4fadc25daad8b9c312cbdcbad}\label{classAlmacen_adba792b4fadc25daad8b9c312cbdcbad} 
+double {\bfseries capacidad}
+\item 
+\Hypertarget{classAlmacen_ac5e1fea137ed3f15a100e732962e0de4}\label{classAlmacen_ac5e1fea137ed3f15a100e732962e0de4} 
+double {\bfseries vol\+Gastado}
+\item 
+\Hypertarget{classAlmacen_a24d4c43042c0f8924feca33382ea61ae}\label{classAlmacen_a24d4c43042c0f8924feca33382ea61ae} 
+vector$<$ T \texorpdfstring{$\ast$}{*} $>$ {\bfseries elemento}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Almacen$<$ T $>$}
+Clase genérica almacén. Representa cualquier objeto en el que se puedan guardar cosas 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classAlmacen_ad4a9058984f5955fdc2fbea28ba23e6f}\label{classAlmacen_ad4a9058984f5955fdc2fbea28ba23e6f} 
+\index{Almacen$<$ T $>$@{Almacen$<$ T $>$}!Almacen@{Almacen}}
+\index{Almacen@{Almacen}!Almacen$<$ T $>$@{Almacen$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Almacen()}{Almacen()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classAlmacen}{Almacen}}$<$ T $>$\mbox{\hyperlink{classAlmacen}{\+::\+Almacen}} (\begin{DoxyParamCaption}\item[{const double \&}]{\+\_\+capacidad }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construye la clase \doxylink{classAlmacen}{Almacen} 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+capacidad} & capacidad que tendrá el almacén \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classAlmacen_adf5a704b6f3dc652601c9c5d9254c67f}\label{classAlmacen_adf5a704b6f3dc652601c9c5d9254c67f} 
+\index{Almacen$<$ T $>$@{Almacen$<$ T $>$}!````~Almacen@{\texorpdfstring{$\sim$}{\string~}Almacen}}
+\index{````~Almacen@{\texorpdfstring{$\sim$}{\string~}Almacen}!Almacen$<$ T $>$@{Almacen$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Almacen()}{\string~Almacen()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual \mbox{\hyperlink{classAlmacen}{Almacen}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classAlmacen}{Almacen}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Destructor de la clase almacén 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classAlmacen_af80802ec0cf55f720d7962932f0a9a39}\label{classAlmacen_af80802ec0cf55f720d7962932f0a9a39} 
+\index{Almacen$<$ T $>$@{Almacen$<$ T $>$}!guardar@{guardar}}
+\index{guardar@{guardar}!Almacen$<$ T $>$@{Almacen$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{guardar()}{guardar()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classAlmacen}{Almacen}}$<$ T $>$\+::guardar (\begin{DoxyParamCaption}\item[{T \texorpdfstring{$\ast$}{*}}]{\+\_\+guardable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Guarda, si es posible, un objeto en el almacén 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+guardable} & puntero al objeto que será guardado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Si se ha podido guardar o no 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+almacen.\+h\end{DoxyCompactItemize}
